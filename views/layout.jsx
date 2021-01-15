@@ -19,4 +19,4 @@ layout.propTypes = {
     title: proptypes.string,
 };
 
-module.exports.layout = layout;
+module.exports = layout;

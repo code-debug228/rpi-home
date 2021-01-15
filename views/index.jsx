@@ -1,4 +1,4 @@
-const react = require('react');
+const React = require('react');
 const layout = require('./layout');
 const proptypes = require('prop-types');
 
@@ -15,4 +15,4 @@ index.propTypes = {
     title: proptypes.string
 };
 
-module.exports.index = index;
+module.exports = index;
