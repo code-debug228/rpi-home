@@ -1,15 +1,22 @@
-var react = require('react');
-var config = require('../config.js');
+const react = require('react');
+const config = require('../config.js');
+const proptypes = require('prop-types');
 
-function layout(properties) {
-  return (
-    <html>
-      <head>
-        <title>config.site_name + {properties.title} !== null ? (' ' + {properties.title}) : ''</title>
-      </head>
-      <body>{props.children}</body>
-    </html>
-  );
+function layout(properties){
+    return (
+        <html>
+        <head>
+            <title>{properties.title}</title>
+        </head>
+        <body>
+            {properties.title}
+        </body>
+        </html>
+    );
 }
 
-module.exports = layout;
+layout.propTypes = {
+    title: proptypes.string,
+};
+
+module.exports.layout = layout;

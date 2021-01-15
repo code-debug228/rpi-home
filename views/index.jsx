@@ -1,14 +1,18 @@
-var react = require('react');
-var layout = require('./layout');
+const react = require('react');
+const layout = require('./layout');
+const proptypes = require('prop-types');
 
-function index(properties) {
-    console.log(123);
+function index(properties){
     return (
-        <layout>
-        <h1>{properties.title}</h1>
-        <p>Welcome to {properties.title}</p>
+        <layout title={properties.title}>
+            <h1>{properties.title}</h1>
+            <p>Welcome to {properties.title}</p>
         </layout>
     );
 }
+
+index.propTypes = {
+    title: proptypes.string
+};
 
 module.exports.index = index;
