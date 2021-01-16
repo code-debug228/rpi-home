@@ -1,12 +1,13 @@
 const express = require('express')
-const app = express()
-const react_views = require('express-react-views');
+const app = express();
+const tl = require('express-tl');
 const config = require('./config.js');
 const routes = require('./routes');
 const site_name = config.site_name;
 
-app.set('view engine', 'jsx');
-app.engine('jsx', react_views.createEngine());
+app.set('views', config.views_folder);
+app.engine('tl', tl);
+app.set('view engine', 'tl');
 
 app.get('/', routes.index);
 
