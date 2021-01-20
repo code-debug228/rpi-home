@@ -14,5 +14,4 @@ module.exports.layout_config = {
 };
 module.exports.site_name = site_name;
 module.exports.views_folder = `${app_path}/${views_folder}`;
-module.exports.bootstrap = "static/bootstrap";
 module.exports.files_folder = files;
