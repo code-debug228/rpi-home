@@ -8,6 +8,7 @@ const site_name = config.site_name;
 app.set('views', config.views_folder);
 app.engine('tl', tl);
 app.set('view engine', 'tl');
+app.use('/static', express.static(config.files_folder));
 
 app.get('/', routes.index);
 
